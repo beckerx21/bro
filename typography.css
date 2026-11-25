@@ -1,0 +1,89 @@
+@font-face{
+  font-family:'Onest';
+  src:url('fonts/Onest.ttf') format('truetype');
+  font-style:normal;
+  font-weight:100 900;
+  font-display:swap;
+}
+:root{--display:'Onest',sans-serif;--mono:'Onest',sans-serif}
+html,body,body *{font-family:'Onest',sans-serif!important}
+h1,h2,h3,.cover-line,.caption-tape,.mode strong{font-weight:750!important}
+.big-thirty{font-weight:800;letter-spacing:-.08em}
+.period{font-weight:800}
+.wordmark{font-weight:800;letter-spacing:-3px}
+.cover-line{font-size:clamp(30px,3vw,43px);line-height:1.12;letter-spacing:-.03em}
+.seasons{font-weight:750;letter-spacing:-.02em}
+.caption-tape{font-size:25px;letter-spacing:-.03em}
+.page-heading h2{font-size:clamp(34px,4vw,51px);letter-spacing:-.035em;line-height:1.12}
+.dossier-copy>h3{font-size:43px;line-height:1.08;letter-spacing:-.035em}
+.career-rows h3{font-size:25px;line-height:1.15;letter-spacing:-.025em}
+.award-copy h3{font-size:clamp(28px,2.8vw,38px);line-height:1.13;letter-spacing:-.035em}
+.archive-total strong,.award-stat>strong,.score strong,.card-mini-stats b{font-weight:750;letter-spacing:-.05em}
+.award-copy>.award-aside,.hand-note,.gift-copy .gift-signature{font-style:normal;line-height:1.7}
+.future-copy h3{font-size:35px;line-height:1.14;letter-spacing:-.035em}
+.gift-copy h3{font-size:44px;line-height:1.12;letter-spacing:-.035em}
+.gift-copy>p{font-size:16px;line-height:1.9}
+.gift-copy .gift-signature{font-size:19px;line-height:1.6;font-weight:600}
+.gift-locked h3{font-size:40px;line-height:1.15;letter-spacing:-.035em}
+.button{font-weight:650;letter-spacing:.01em}
+.cover-copy>.text-button{font-size:13px}
+.micro,.award-meta,.archive-total span,.ledger-label,.ledger-end{letter-spacing:.045em}
+.archive-foot{justify-content:flex-end}
+.player-intro h2{font-size:37px;line-height:1.15;letter-spacing:-.035em}
+.player-stats dd{font-weight:700}
+.bonus-slip>strong{font-size:25px;font-weight:750;letter-spacing:-.02em}
+@media(max-width:1100px){
+  .cover-line{font-size:33px}
+  .dossier-copy>h3{font-size:36px}
+  .award-copy h3{font-size:29px}
+  .future-copy h3{font-size:30px}
+  .gift-copy h3{font-size:36px}
+  .caption-tape{font-size:23px}
+}
+@media(max-width:760px){
+  .page-heading h2{font-size:32px}
+  .cover-line{font-size:33px}
+  .cover-description{font-size:15px;line-height:1.75}
+  .cover-copy>.button{font-size:13px}
+  .dossier-copy>h3{font-size:37px}
+  .career-rows h3{font-size:26px}
+  .career-rows p{font-size:15px;line-height:1.8}
+  .award-copy h3{font-size:31px}
+  .award-copy>p:not(.micro){font-size:16px;line-height:1.8}
+  .archive .page-heading h2{font-size:33px;white-space:normal}
+  .future-copy h3{font-size:29px}
+  .gift-copy h3{font-size:33px}
+  .gift-copy>p{font-size:16px;line-height:1.9}
+  .gift-locked h3{font-size:30px}
+  .player-intro h2{font-size:30px}
+  .bonus-slip>strong{font-size:23px}
+}
+@media(max-width:380px){
+  .cover-line{font-size:29px}
+  .page-heading h2,.archive .page-heading h2{font-size:28px}
+  .award-copy h3{font-size:27px}
+  .future-copy h3{font-size:26px}
+  .gift-copy h3{font-size:29px}
+  .player-intro h2{font-size:27px}
+}
+.gift-memories{min-width:0;align-self:start;display:grid;gap:30px}
+.gift-memories figure{margin:0;background:var(--paper);color:var(--ink)}
+.gift-memories img{width:100%;height:auto;object-fit:contain}
+.gift-memories figcaption{padding:18px 20px;font-size:15px;line-height:1.7}
+.gift-memories figcaption strong,.gift-memories figcaption span{display:block}
+.gift-memories figcaption strong{font-size:20px;margin-bottom:5px}
+.gift-memories .today-photo{width:72%;justify-self:end}
+.gift-memories .today-photo img{max-height:480px;object-fit:cover;object-position:50% 35%}
+@keyframes memory-reveal{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes evidence-reveal{from{opacity:.2;transform:scale(1.025)}to{opacity:1;transform:scale(1)}}
+@media(prefers-reduced-motion:no-preference){
+ .screen:not([hidden]) .cover-copy,.screen:not([hidden]) .dossier-copy{animation:memory-reveal .65s ease both}
+ .screen:not([hidden]) .cover-photo{animation:memory-reveal .85s .1s ease both}
+ #evidence-img{animation:evidence-reveal .5s ease both}
+ #gift-open:not([hidden]) .childhood-photo{animation:memory-reveal 1s ease both}
+ #gift-open:not([hidden]) .gift-copy{animation:memory-reveal .9s .2s ease both}
+ #gift-open:not([hidden]) .today-photo{animation:memory-reveal 1s .35s ease both}
+ .button,.archive-tabs button{transition:background-color .2s ease,color .2s ease,box-shadow .2s ease}
+ .button:hover:not(:disabled){box-shadow:0 4px 0 #0003}
+}
+@media(max-width:760px){.gift-memories{display:grid;grid-template-columns:1fr;gap:20px}.gift-memories .today-photo{display:none}.gift-memories figcaption{padding:16px}.gift-memories figcaption strong{font-size:19px}}

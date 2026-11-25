@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="theme-color" content="#141516">
+  <meta name="description" content="30 сезонов одной легенды. Семейный архив, сомнительные рекорды и абсолютно заслуженные награды.">
+  <title>30 сезонов. Личное дело легенды.</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="game.css">
+  <link rel="stylesheet" href="typography.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+<header class="masthead">
+  <button class="wordmark" data-screen="home" aria-label="На главную">Л30<span>.</span></button>
+  <nav aria-label="Разделы"><button data-screen="home" aria-current="page">Обложка</button><button data-screen="career">Личное дело</button><button data-screen="hall">Награды</button><button data-screen="game">Пенальти</button><button data-screen="gift">Премия</button></nav>
+  <button class="sound" id="sound" aria-pressed="false" aria-label="Включить звук"><span class="sound-bars" aria-hidden="true"><i></i><i></i><i></i></span><span id="sound-text">Звук выкл.</span></button>
+</header>
+<main>
+  <section id="home" class="screen cover" aria-label="Обложка">
+    <div class="cover-copy">
+      <p class="micro">Архив к тридцатилетию</p>
+      <h1><span class="big-thirty">30<span class="period">.</span></span><span class="seasons">сезонов</span></h1>
+      <p class="cover-line">Одна легенда.<br>И куча улик.</p>
+      <p class="cover-description">Взрослая жизнь пыталась его изменить.<br>На фото - результат переговоров.</p>
+      <button class="button yellow" data-screen="hall">Поднять архив <span class="button-key" aria-hidden="true">×</span></button>
+      <button class="text-button" id="player-open">Посмотреть характеристики</button>
+    </div>
+    <figure class="cover-photo">
+      <img src="photos/director.png" alt="Брат с кинохлопушкой «Реальные пацаны»" fetchpriority="high">
+      <div class="photo-topline"><button id="rating-joke" aria-label="Общий рейтинг 99">99<small>рейтинг</small></button></div>
+      <figcaption><span class="caption-tape">Реальные 30</span><span class="photo-caption">Настолько крут, что даже снялся<br>в «Реальных пацанах».</span></figcaption>
+    </figure>
+    <div class="cover-ledger" aria-label="Главные достижения">
+      <button data-achievement="patience"><span class="ledger-label">НЕРВНАЯ СИСТЕМА</span><strong>30 лет веры в «Динамо»</strong><span class="ledger-end">ТЕРПЕНИЕ: ∞</span></button>
+      <button data-achievement="leonids"><span class="ledger-label">ИСТОРИЧЕСКИЙ ФАКТ</span><strong>Царя Леонидса пережил</strong><span class="ledger-end">ЛЕТОПИСЬ СОХРАНЕНА</span></button>
+      <button data-achievement="gta6"><span class="ledger-label">МИССИЯ ВЫПОЛНЕНА</span><strong>До GTA VI дожил</strong><span class="ledger-end">ЕСТЬ ФОТО-ДОКАЗАТЕЛЬСТВО</span></button>
+    </div>
+  </section>
+
+  <section id="career" class="screen dossier page" hidden>
+    <div class="page-heading"><div><p class="micro">Личное дело</p><h2>Характер<br>уже не исправить.</h2></div><button class="text-button" data-screen="home">На обложку</button></div>
+    <div class="dossier-spread">
+      <figure class="dossier-photo"><img src="photos/football.png" alt="Компания на футбольной трибуне «Динамо»" loading="lazy"><figcaption>одна команда - одна семья</figcaption><button class="photo-expand" data-photo="football.png" data-alt="Компания на футбольной трибуне">Открыть фото</button></figure>
+      <div class="dossier-copy"><p class="micro">Профиль игрока</p><h3>Домашний.<br>Гостевой.<br>Наш.</h3><dl class="facts"><div><dt>Работа</dt><dd>Управляющий ресторана</dd></div><div><dt>Футбол</dt><dd>«Динамо» Москва, «Челси»</dd></div><div><dt>Хоккей</dt><dd>«Динамо» Москва</dd></div><div><dt>Слабое место</dt><dd>Кружечка пива</dd></div></dl><p class="hand-note">В анкете написал «стрессоустойчив».<br>Болеет за «Динамо». Верим.</p></div>
+    </div>
+    <div class="career-rows"><article><span class="micro">НА РАБОТЕ</span><h3>Собирает команду.</h3><p>Расставить людей по местам, наладить работу и держать весь ресторан в одном ритме. Если со стороны кажется, что всё работает само - значит, он всё организовал как надо. Даже хаос у него выходит по графику.</p></article><article><span class="micro">НА ТРИБУНЕ</span><h3>Не меняет цвета.</h3><p>«Динамо» - на траве и на льду. «Челси» - в Англии. Синих вещей столько, что стиральная машина уже тоже болеет.</p></article><article><span class="micro">С СЕМЬЁЙ</span><h3>Свой человек.</h3><p>Брат, с тобой можно и посмеяться до слёз, и поговорить о важном. Спасибо за поддержку, за наши общие истории и за то, что рядом с тобой всегда чувствуешь себя своим. Очень тебя любим.</p></article></div>
+    <button class="button yellow" data-screen="hall">Открыть послужной список</button>
+    <button class="text-button future-link" id="future-open">А что дальше? Есть один бизнес-план.</button>
+  </section>
+
+  <section id="hall" class="screen archive page" hidden>
+    <div class="page-heading"><div><p class="micro">Послужной список / с фото-доказательствами</p><h2>Есть за что.</h2></div><div class="archive-total"><strong id="archive-count">0/8</strong><span>наград в кармане</span></div></div>
+    <div class="archive-layout">
+      <div class="archive-tabs" id="achievement-tabs" role="tablist" aria-label="Достижения"></div>
+      <div id="achievement-panel" class="achievement-panel" role="tabpanel" tabindex="0">
+        <figure class="evidence" id="evidence"><img id="evidence-img" src="photos/football.png" alt="Компания на футболе"><figcaption id="evidence-caption">ФОТО ИЗ СЕМЕЙНОГО АРХИВА</figcaption><span class="award-stamp" id="award-stamp" hidden>Получено</span><button class="photo-expand" id="evidence-expand">Открыть фото</button></figure>
+        <article class="award-copy"><div class="award-meta"><span id="award-category">ВЫСШАЯ ВЫДЕРЖКА</span><span id="award-position">1 / 8</span></div><h3 id="award-title">30 лет.<br>«В этом году точно».</h3><p id="award-text"></p><div class="award-stat"><span id="award-stat-label">ТЕРПЕНИЕ</span><strong id="award-stat-value">∞</strong></div><p class="award-aside" id="award-aside"></p><div class="award-actions"><button class="button yellow" id="claim-award">ВЫДАТЬ НАГРАДУ</button><button class="text-button" id="next-award">Следующее дело</button></div><p class="micro award-number" id="award-number">ДОКУМЕНТАЛЬНО ПОДТВЕРЖДЕНО</p></article>
+      </div>
+    </div>
+    <div class="archive-foot"><button class="text-button" data-screen="game">Ладно, где тут играть?</button></div>
+    <article class="future-plan" id="future-plan" aria-labelledby="future-heading">
+      <figure class="future-photo"><span class="micro">Стартовый капитал</span><img src="photos/limoncello-hq.png" alt="Бутылка лимонной настойки Limoncello" loading="lazy"><figcaption>Первый лот будущей империи</figcaption><button class="photo-expand" data-photo="limoncello-hq.png" data-alt="Бутылка лимонной настойки Limoncello">Открыть фото</button></figure>
+      <div class="future-copy"><p class="micro">Цель на будущее / сезоны 31+</p><h3 id="future-heading">Сначала - настойки.<br>Потом - «Динамо».</h3><ol><li>Масштабировать производство настоек.</li><li>Заработать миллионы.</li><li>Стать спонсором «Динамо».</li></ol><p class="future-aside">Чтобы «я столько в этот клуб вложил» было не эмоцией, а строкой в договоре.</p><span class="future-status">План есть. Осталось выйти на объёмы.</span></div>
+    </article>
+  </section>
+
+  <section id="game" class="screen match page" hidden>
+    <div class="page-heading"><div><p class="micro">Матч дня / серия пенальти</p><h2>Ты против Куртуа.</h2></div><button class="text-button" data-screen="home">Покинуть поле</button></div>
+    <div class="match-topline"><span>Бро, пора пробить Куртуа, на тебя смотрит весь стадион</span><span>Пять ударов. Три гола для победы.</span></div>
+    <div class="match-layout"><div class="pitch" aria-label="Футбольное поле"><div class="scorebug"><span>БРО</span><strong id="scorebug-score">0 : 0</strong><span>КУРТУА</span></div><div class="terrace" aria-hidden="true">ДИНАМО · ДИНАМО · ДИНАМО · ДИНАМО · ДИНАМО</div><div class="goal"><button class="goal-target" data-shot="left" aria-label="Удар в левый угол"><span>1</span>ЛЕВО</button><button class="goal-target" data-shot="middle" aria-label="Удар по центру"><span>2</span>ПАНЕНКА</button><button class="goal-target" data-shot="right" aria-label="Удар в правый угол"><span>3</span>ПРАВО</button><div class="keeper" aria-hidden="true"><img src="game/courtois.png" alt="" draggable="false"></div></div><div class="striker" aria-hidden="true"><img src="game/brother.png" alt="" draggable="false"></div><div class="penalty-spot" aria-hidden="true"></div><div class="ball" aria-hidden="true"></div><span class="pitch-label">Весь стадион за тебя</span></div><aside class="match-report"><div class="report-title"><span>Протокол матча</span><b id="attempt">УДАР 1/5</b></div><div class="score"><strong id="score">0</strong><span>из пяти</span></div><div class="shot-history" id="shot-history" aria-label="Результаты ударов"></div><p id="match-message" role="status">Куртуа готов. Выбери угол ворот и пробей.</p><button class="button yellow" id="claim-gift" data-screen="gift" hidden>Забрать премию</button><button class="text-button" id="retry">Давай ещё серию</button></aside></div>
+    <p class="game-help">На телефоне нажми на зону ворот. На клавиатуре - 1, 2 или 3. Трибуны поддержат при любом раскладе.</p>
+  </section>
+
+  <section id="gift" class="screen premium page" hidden>
+    <div class="page-heading"><div><p class="micro">От младшего брата</p><h2>Премиальный<br>вопрос.</h2></div><button class="text-button" data-screen="home">На обложку</button></div>
+    <div id="gift-locked" class="gift-locked"><span class="micro">Награда ещё закрыта</span><h3>Сначала несколько<br>красивых голов.</h3><p>Три из пяти - и мы больше не задаём вопросов.</p><button class="button yellow" data-screen="game">Выйти и решить</button></div>
+    <div id="gift-open" class="gift-spread" hidden><div class="gift-memories"><figure class="childhood-photo"><img src="photos/childhood.png" alt="Детская семейная фотография" loading="lazy"><figcaption><strong>Ещё до всех рейтингов.</strong><span>Ты уже был моим старшим братом. Всё самое важное началось здесь.</span></figcaption></figure><figure class="today-photo"><img src="photos/birthday.png" alt="Брат с праздничным тортом" loading="lazy"><figcaption>А впереди ещё столько хорошего.</figcaption></figure></div><div class="gift-copy"><span class="approval">С юбилеем, старший</span><h3>Бро, поздравляю<br>тебя с юбилеем!</h3><p>Ты всегда был для меня опорой и примером. Ты сыграл огромную роль в моём взрослении. Я перенял многие твои увлечения и ни капли об этом не жалею.</p><p>Ты показал мне, что значит всем сердцем болеть за любимый клуб, и был рядом в очень трудные для меня времена. Я это очень ценю.</p><p>Желаю тебе достичь всех поставленных целей. Ты со всем справишься - я всегда был в этом уверен. Восхищаюсь твоей харизмой, чувством юмора и умением располагать к себе людей. Пусть рядом будут только самые надёжные люди.</p><p>30 лет - только начало, всё ещё впереди. Мужчины с возрастом только хорошеют. Главное, спину береги!</p><p>Спасибо, что ты рядом.</p><div class="bonus-slip"><span>ЗА 30 УСПЕШНО ЗАКРЫТЫХ СЕЗОНОВ</span><strong>ДЕНЕЖНЫЙ БОНУС</strong><button id="bonus-joke">СУММА ЗАСЕКРЕЧЕНА</button></div><p class="gift-signature">Обнимаю, бро.<br>Твой младший брат.</p><button class="text-button" id="celebrate">Ещё раз пошуметь</button></div></div>
+  </section>
+</main>
+<div class="toast" id="toast" role="status" hidden></div>
+<dialog class="photo-dialog" id="photo-dialog"><button class="dialog-close" id="photo-close" aria-label="Закрыть фотографию">×</button><img id="full-photo" alt=""><p id="full-photo-caption"></p></dialog>
+<dialog class="player-dialog" id="player-dialog"><button class="dialog-close" id="player-close" aria-label="Закрыть характеристики">×</button><div class="player-intro"><span class="micro">СКАУТСКИЙ ОТЧЁТ МЛАДШЕГО БРАТА</span><h2>РЕЙТИНГ 99.<br>СВОЙ. ЛЮБИМЫЙ.</h2></div><div class="player-sheet"><img src="photos/director.png" alt="Портрет брата с кинохлопушкой"><div><dl class="player-stats"><div><dt>Харизма</dt><dd>96</dd></div><div><dt>Чувство юмора</dt><dd>94</dd></div><div><dt>Поддержка своих</dt><dd>99</dd></div><div><dt>Преданность клубу</dt><dd>98</dd></div></dl><p>Цифры для игры. А за то, какой ты брат, отдельное спасибо.</p><button class="text-button" id="appeal">Оспорить объективную оценку</button></div></div></dialog>
+</body>
+</html>
